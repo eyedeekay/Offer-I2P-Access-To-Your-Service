@@ -118,7 +118,7 @@ In order to ensure that your eepSite deployment gets the same benefits as your
 clear-web site as possible, it's usually a good idea to connect your service to
 I2P at the same point that you connect to the clear web, with some exceptions.
 Fail2Ban, for instance, may cause issues if you rate-limit by IP address, as I2P
-clients will always appear to be the localhost
+clients will always appear to be the localhost.
 
 Process Two: Forward your service to an eepSite
 ------------
