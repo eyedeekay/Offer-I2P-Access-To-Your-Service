@@ -14,7 +14,7 @@ for.
 #### As you examine your software, ask yourself these questions
 
 These questions should help you evaluate what parts of your software stack are
-relevant to your i2p eepSite.
+relevant to your I2P eepSite.
 
 ##### Does this software work based on IP addresses?
 
@@ -40,14 +40,21 @@ rules are applicable and that a rules update cannot be triggered as a result of
 a normal client request. This would create a server-to-server communication
 which could reveal the timing of an I2P communication to a third party.
 
-### Step two: Determine which port to Forward to I2P
+### Step two: Determine which port to Forward to I2P and Optionallly locate your TLS certificate
 
-In order to ensure that your eepSite deployment gets the same benefits as your
-clear-web site as possible, it's usually a good idea to connect your service to
-I2P at the same point that you connect to the clear web, with some exceptions
-you might decide on based on the questions above.
+Now you've gathered all the information that you will require to forward your
+service to I2P. Once you've selected the point at which you would like to make
+your site available to I2P, you will need to note the port you wish to foward.
+In simple scenarios, this will probably just be port 80 or port 8080. In more
+sophisticated scenarios, this might be a reverse proxy or something like that.
+Make a note of the port.
 
-#### Once you've evaluated proxies, filters, containers, et cetera
+#### Establishing a Common Identity for both the Clearnet and your eepSite
 
-Once you've
-
+Should you be a non-anonymous organization that wishes to provide enhanced
+privacy to your users by providing a hidden service, you may wish to establish
+a common identity between versions of your site. However, since we can't add
+[.I2P domains to clearnet TLS certificates](/IDENTITY/tls.html), we have to do
+this in another way. To do this, **even if you are forwarding the HTTP port**'
+**and not HTTPS**, make a note of the location of your TLS certificate for use
+in the final step.
