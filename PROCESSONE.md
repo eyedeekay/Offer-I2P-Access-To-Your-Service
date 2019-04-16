@@ -40,7 +40,7 @@ rules are applicable and that a rules update cannot be triggered as a result of
 a normal client request. This would create a server-to-server communication
 which could reveal the timing of an I2P communication to a third party.
 
-### Step two: Determine which of those applications exposes your application to the clear-web
+### Step two: Determine which port to Forward to I2P
 
 In order to ensure that your eepSite deployment gets the same benefits as your
 clear-web site as possible, it's usually a good idea to connect your service to
