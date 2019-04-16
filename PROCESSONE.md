@@ -47,4 +47,7 @@ clear-web site as possible, it's usually a good idea to connect your service to
 I2P at the same point that you connect to the clear web, with some exceptions
 you might decide on based on the questions above.
 
-#### Once you've
+#### Once you've evaluated proxies, filters, containers, et cetera
+
+Once you've
+
