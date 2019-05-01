@@ -22,7 +22,7 @@ cryptographically secure network layer like I2P!
 
 #### Step four: Back to TLS for a moment
 
-#### Place your .b32.i2p link on your clearnet page
+#### Place your .b32.I2P link on your clearnet page
 
 
 

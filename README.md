@@ -110,21 +110,26 @@ cryptographically secure network layer like I2P!
 
 ### Step three: Generate your I2P Tunnels and Addresses
 
+#### Create an HTTP Tunnel for your application
+
+
+
+#### Create an HTTP proxy for your application(Optional)
 
 
 ### Step four: Publicize and Authenticate your eepSite
 
 
 
-#### Back to TLS for a moment
+#### Step four: Back to TLS for a moment
 
 #### Place your .b32.I2P link on your clearnet page
 
-However, since the CA/B and the IETF are ridiculous and backward, you might have
-to euthenticate your service to your users in another way. It's not the end of
-the world, though.
+
 
 #### Distributing an "Addresshelper" link from your clearnet page
+
+
 
 #### Distributing
 See Also:
