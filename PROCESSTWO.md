@@ -39,6 +39,7 @@ at the same time transparently, which is referred to as "Multihoming."
 ### Step four: Publicize and Authenticate your eepSite
 
 
+
 #### Place your .b32.i2p link on your clearnet page
 
 
