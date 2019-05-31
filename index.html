@@ -20,21 +20,22 @@
 <h3 id="step-two-determine-which-port-to-forward-to-i2p-and-optionallly-locate-your-tls-certificate">Step two: Determine which port to Forward to I2P and Optionallly locate your TLS certificate</h3>
 <p>Now you've gathered all the information that you will require to forward your service to I2P. Once you've selected the point at which you would like to make your site available to I2P, you will need to note the port you wish to foward. In simple scenarios, this will probably just be port 80 or port 8080. In more sophisticated scenarios, this might be a reverse proxy or something like that. Make a note of the port.</p>
 <h4 id="establishing-a-common-identity-for-both-the-clearnet-and-your-eepsite">Establishing a Common Identity for both the Clearnet and your eepSite</h4>
-<p>Should you be a non-anonymous organization that wishes to provide enhanced privacy to your users by providing a hidden service, you may wish to establish a common identity between versions of your site. However, since we can't add <a href="/IDENTITY/tls.html">.I2P domains to clearnet TLS certificates</a>, we have to do this in another way. To do this, <strong>even if you are forwarding the HTTP port</strong>' <strong>and not HTTPS</strong>, make a note of the location of your TLS certificate for use in the final step.</p>
+<p>Should you be a non-anonymous organization that wishes to provide enhanced privacy to your users by providing a hidden service, you may wish to establish a common identity between versions of your site. However, since we can't add <a href="/IDENTITY/tls.html">.i2p domains to clearnet TLS certificates</a>, we have to do this in another way. To do this, <strong>even if you are forwarding the HTTP port</strong> <strong>and not HTTPS</strong>, make a note of the location of your TLS certificate for use in the final step.</p>
 <h2 id="process-two-forward-your-service-to-an-eepsite">Process Two: Forward your service to an eepSite</h2>
 <p>Congratulations! You've completed the most difficult part. From here on, the decisions you must make, and the consequences that they will have, are much more straightforward and easy to enumerate. Such is the beauty of a cryptographically secure network layer like I2P!</p>
-<h3 id="step-three-generate-your-i2p-tunnels-and-addresses">Step three: Generate your I2P Tunnels and Addresses</h3>
+<h3 id="step-three-generate-your-i2p-tunnels-and-addresses">Step three: Generate your .i2p Tunnels and Addresses</h3>
 <h4 id="create-an-http-tunnel-for-your-application">Create an HTTP Tunnel for your application</h4>
 <h4 id="create-an-http-proxy-for-your-applicationoptional">Create an HTTP proxy for your application(Optional)</h4>
+<p>If your application has a configurable HTTP Proxy and does server-to-server communication, <em>and</em> you wish to communicate with other sites on the I2P network,</p>
 <h3 id="step-four-publicize-and-authenticate-your-eepsite">Step four: Publicize and Authenticate your eepSite</h3>
 <h4 id="step-four-back-to-tls-for-a-moment">Step four: Back to TLS for a moment</h4>
-<h4 id="place-your-b32i2p-link-on-your-clearnet-page">Place your .b32.I2P link on your clearnet page</h4>
+<h4 id="place-your-b32i2p-link-on-your-clearnet-page">Place your .b32.i2p link on your clearnet page</h4>
 <h4 id="distributing-an-addresshelper-link-from-your-clearnet-page">Distributing an &quot;Addresshelper&quot; link from your clearnet page</h4>
 <h4 id="distributing">Distributing</h4>
 
-<h1 id="see-also">See Also:</h1>
+<h2 id="see-also">See Also:</h2>
 <p>Most of the security issues of hosting Tor hidden services also apply to I2P. It would be advisable to take advantage of their resources as well as this one:</p>
-<h2 id="misc-links">Misc Links</h2>
+<h3 id="misc-links">Misc Links</h3>
 <ul>
 <li><a href="https://2019.www.torproject.org/docs/tor-onion-service.html.en">Official Guide</a></li>
 <li><a href="https://riseup.net/en/security/network-security/tor/onionservices-best-practices">Riseup best Practices</a></li>
@@ -42,13 +43,13 @@
 <li><a href="https://www.whonix.org/wiki/Onion_Services">Whonix Docs Onion Service</a></li>
 <li><a href="https://old.reddit.com/r/TOR/comments/bd5aqc/can_my_server_trade_off_privacy_for_speed_and/">Reddit thread</a></li>
 </ul>
-<h2 id="stack-exchange">Stack Exchange</h2>
+<h3 id="stack-exchange">Stack Exchange</h3>
 <ul>
 <li><a href="https://tor.stackexchange.com/questions/16680/hosting-site-as-hidden-service">Hosting clearnet site as onion service</a></li>
 <li><a href="https://tor.stackexchange.com/questions/58/securely-hosting-a-tor-hidden-service-site">Securing a Tor Hidden Service</a></li>
 <li><a href="https://tor.stackexchange.com/questions/6014/does-hosting-a-tor-hidden-service-also-on-clearnet-dns-reduce-privacy-security-f">Effects of hosting hidden and non-hidden services</a></li>
 </ul>
-<h2 id="clearnet-web-sites-announcing-public-services">Clearnet Web Sites announcing Public Services:</h2>
+<h3 id="clearnet-web-sites-announcing-public-services">Clearnet Web Sites announcing Public Services:</h3>
 <ul>
 <li><a href="https://www.propublica.org/nerds/a-more-secure-and-anonymous-propublica-using-tor-hidden-services">Propublica</a></li>
 <li><a href="https://meta.wikimedia.org/wiki/Grants_talk:IdeaLab/A_Tor_Onion_Service_for_Wikipedia">Wikipedia Proposal</a></li>

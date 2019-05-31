@@ -1,3 +1,9 @@
+.. meta::
+    :author: idk
+    :date: 2019-06-01
+    :excerpt: Offering an I2P Mirror
+
+=====================================================
 How to offer your existing Web Site as an I2P eepSite
 =====================================================
 
@@ -15,3 +21,5 @@ in particular If I really mean it I will address the reader directly(i.e. using
 the reader might be asking. This is, after all, a "process" that an
 administrator must consider themselves "involved" in just like hosting any other
 service.
+
+`FAQ for/From SyaAdmins </FAQ/>`__

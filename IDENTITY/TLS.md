@@ -6,7 +6,7 @@ NOTE
 ----
 
 It's perfectly possible to use a TLS certificate to identify a site inside of
-I2P in addition to I2P's self-authenticating properties. However, the most
+I2P in addition to.i2p's self-authenticating properties. However, the most
 useful application of this I can think of, using a TLS certificate to show that
 an eepSite and a clearnet site are served by the ame organization is currently
 impossible, or at least so difficult it would be counter-productive to instruct
@@ -23,8 +23,8 @@ In order to ensure that your eepSite deployment gets the same benefits as your
 clear-web site as possible, it's usually a good idea to connect your service to
 I2P at the same point that you connect to the clear web, with some exceptions
 you might decide on based on the questions above. If you are not a corporation
-offering .I2P access, you can probably skip this section entirely in favor of
-side-channel validation of the I2P base32 and addresshelper links, which is
+offering .i2p access, you can probably skip this section entirely in favor of
+side-channel validation of the.i2p base32 and addresshelper links, which is
 arguably easier, much less expensive, and apolitical.
 
 #### Important Reading:
@@ -47,13 +47,13 @@ If your site uses TLS, which it should on the clearnet unless it's literally
 you may want to link your eepSite to your identity as authenticated by TLS.
 Unfortunately, this is easier said than done, I combed through every bit of
 documentation that I could find and there doesn't seem to be any way to add a
-.b32.I2P or .I2P domain name to a certificate *except* possibly for some
+.b32.i2p or .i2p domain name to a certificate *except* possibly for some
 Universal Communications Certificates, which I cannot afford. Unlike .onion,
-.I2P domain names are not recognized as special use domain names yet and cannot
+.i2p domain names are not recognized as special use domain names yet and cannot
 be included in the SAN field of other kinds of certificates.
 
 *So* as a workaround to establish a trusted link between your clearnet presence
-and your I2P presence, we're going to use a simple trick. Unfortunately, it
+and your.i2p presence, we're going to use a simple trick. Unfortunately, it
 won't fix all the usability issues that come with self-signed certificates, but
 it *will* allow visitors to confirm that a self-signed certificate was created
 by a person with access to your private key and establish a link to your
@@ -61,9 +61,9 @@ corporate presence. We will generate this self-signed certificate in a future
 step, for now, identify the certificates and keys used to authenticate your
 clearnet site and make a note of their location.
 
-##### Future work: TLS-in-I2P without self-signed certificates
+##### Future work: TLS-in.i2p without self-signed certificates
 
-In the future, it will probably be beneficial to authenticate .I2P domains in
+In the future, it will probably be beneficial to authenticate .i2p domains in
 another way. [darkweb-everywhere](https://github.com/chris-barry/darkweb-everywhere)
 may be an interesting prospect.
 
