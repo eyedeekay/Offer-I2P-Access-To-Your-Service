@@ -130,6 +130,24 @@ and click "Create."
 It will immediately drop you into the granular tunnel configuration page, which
 we're about to explore from top-to-bottom.
 
+![1](./MIRROR_IMAGES/http-1.png)
+
+![2](./MIRROR_IMAGES/http-2.png)
+
+![3](./MIRROR_IMAGES/http-3.png)
+
+![4](./MIRROR_IMAGES/http-4.png)
+
+![5](./MIRROR_IMAGES/http-5.png)
+
+![6](./MIRROR_IMAGES/http-6.png)
+
+![7](./MIRROR_IMAGES/http-7.png)
+
+![8](./MIRROR_IMAGES/http-8.png)
+
+![9](./MIRROR_IMAGES/http-9.png)
+
 #### Multi-Home an Application
 
 One interesting thing that I2P can do is host the same site on multiple servers
