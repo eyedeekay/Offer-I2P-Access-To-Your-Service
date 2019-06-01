@@ -154,13 +154,25 @@ reduce the number of hops the tunnel takes on the I2P network.
 
 ![4](./MIRROR_IMAGES/http-4.png)
 
+Next are the encrypted leaseset options. You can probably leave these as the
+defaults, since your site isn't anonymous it probably doesn't need features like
+blinding or encrypted leasesets.
+
 ![5](./MIRROR_IMAGES/http-5.png)
+
+
 
 ![6](./MIRROR_IMAGES/http-6.png)
 
+
+
 ![7](./MIRROR_IMAGES/http-7.png)
 
+
+
 ![8](./MIRROR_IMAGES/http-8.png)
+
+
 
 ![9](./MIRROR_IMAGES/http-9.png)
 
