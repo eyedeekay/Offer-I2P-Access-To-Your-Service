@@ -21,5 +21,3 @@ in particular If I really mean it I will address the reader directly(i.e. using
 the reader might be asking. This is, after all, a "process" that an
 administrator must consider themselves "involved" in just like hosting any other
 service.
-
-`FAQ for/From SyaAdmins </FAQ/>`__

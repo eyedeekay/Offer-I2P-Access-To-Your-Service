@@ -45,8 +45,8 @@ rules are applicable and that a rules update cannot be triggered as a result of
 a normal client request. This would create a server-to-server communication
 which could reveal the timing of an I2P communication to a third party.
 
-Step two: Determine which port to Forward to I2P and Optionallly locate your TLS certificate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step two: Determine which port to Forward to I2P and Optionally locate your TLS certificate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now you've gathered all the information that you will require to forward your
 service to I2P. Once you've selected the point at which you would like to make

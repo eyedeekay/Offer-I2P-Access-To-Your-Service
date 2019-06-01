@@ -57,23 +57,36 @@ reduce the number of hops the tunnel takes on the I2P network.
 
 Next are the encrypted leaseset options. You can probably leave these as the
 defaults, since your site isn't anonymous it probably doesn't need features like
-blinding or encrypted leasesets.
+blinding or encrypted leasesets. If you were to choose encrypted leasesets, you
+would not be accessible to anyone unless you shared a key with them in advance.
 
 ![5](./MIRROR_IMAGES/http-5.png)
 
-
+The next few parts may be especially useful to you if you run a high-traffic
+site or find yourself subject to DDOS attacks. Here you can configure various
+kinds of connection limits.
 
 ![6](./MIRROR_IMAGES/http-6.png)
 
-
+After that, there are a few other ways of filtering connections by client
+characteristics. First, you can block access via inproxies like I2P.to and
+similar. Since you have a clearnet presence already, changing this may be better
+if you want to encourage I2P users to only use your eepSite. You can also block
+accesses via specific user-agents, for instance blocking wget may be helpful if
+you want to prevent spidering. Finally, and of particular interest to Fail2Ban
+users, the "Unique local address per client" will give each client it's own
+local IP address instead of them all appearing to the server to be from
+127.0.0.1.
 
 ![7](./MIRROR_IMAGES/http-7.png)
 
-
+You can probably leave these next few options to the defaults.
 
 ![8](./MIRROR_IMAGES/http-8.png)
 
-
+Lastly, you can set up an advanced filter definition. Writing filters is beyond
+what I'm prepared to do in this document, for more information see the format
+specification for now.
 
 ![9](./MIRROR_IMAGES/http-9.png)
 

@@ -34,11 +34,15 @@
 <p><img src="./MIRROR_IMAGES/http-3.png" alt="3" /></p>
 <p>A little further down the configuration page, the tunnel options are available. Since you've got a site which is not intended to be anonymous, but rather to provide anonymous access to others by an alternate gateway, it may be good to reduce the number of hops the tunnel takes on the I2P network.</p>
 <p><img src="./MIRROR_IMAGES/http-4.png" alt="4" /></p>
-<p>Next are the encrypted leaseset options. You can probably leave these as the defaults, since your site isn't anonymous it probably doesn't need features like blinding or encrypted leasesets.</p>
+<p>Next are the encrypted leaseset options. You can probably leave these as the defaults, since your site isn't anonymous it probably doesn't need features like blinding or encrypted leasesets. If you were to choose encrypted leasesets, you would not be accessible to anyone unless you shared a key with them in advance.</p>
 <p><img src="./MIRROR_IMAGES/http-5.png" alt="5" /></p>
+<p>The next few parts may be especially useful to you if you run a high-traffic site or find yourself subject to DDOS attacks. Here you can configure various kinds of connection limits.</p>
 <p><img src="./MIRROR_IMAGES/http-6.png" alt="6" /></p>
+<p>After that, there are a few other ways of filtering connections by client characteristics. First, you can block access via inproxies like I2P.to and similar. Since you have a clearnet presence already, changing this may be better if you want to encourage I2P users to only use your eepSite. You can also block accesses via specific user-agents, for instance blocking wget may be helpful if you want to prevent spidering. Finally, and of particular interest to Fail2Ban users, the &quot;Unique local address per client&quot; will give each client it's own local IP address instead of them all appearing to the server to be from 127.0.0.1.</p>
 <p><img src="./MIRROR_IMAGES/http-7.png" alt="7" /></p>
+<p>You can probably leave these next few options to the defaults.</p>
 <p><img src="./MIRROR_IMAGES/http-8.png" alt="8" /></p>
+<p>Lastly, you can set up an advanced filter definition. Writing filters is beyond what I'm prepared to do in this document, for more information see the format specification for now.</p>
 <p><img src="./MIRROR_IMAGES/http-9.png" alt="9" /></p>
 <h4 id="multi-home-an-application">Multi-Home an Application</h4>
 <p>One interesting thing that I2P can do is host the same site on multiple servers at the same time transparently, which is referred to as &quot;Multihoming.&quot;</p>
