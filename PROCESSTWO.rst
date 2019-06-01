@@ -33,7 +33,7 @@ interface, go to the I2PTunnel configuration page.
 At the bottom of the "I2P Hidden Services" section of the page, select an HTTP
 Service from the drop-down and click "Create."
 
-|1|
+|config stuff|
 
 It will immediately drop you into the granular tunnel configuration page, which
 we're about to explore from top-to-bottom. The first, most essential settings
@@ -42,35 +42,36 @@ are the tunnel name and the target host:port. **The target host:port is**
 **I2P**. Once you've configured that, your web site will become available over
 i2p. However, there are probably a few things that we can improve.
 
-|2|
+|host stuff|
 
 Next, you may want to pick a hostname to use for your eepSite. This hostname
 doesn't need to be universally unique, for now, it will only be used locally.
-We'll publish it to an address helper later. If the *Local Destination* field
-isn't populated with your Base64 Destination yet, you should scroll down to the
-bottom, save the tunnel configuration, and return to the tunnel configuration.
+We'll publish it to an address helper later. **If** the *Local Destination*
+field isn't populated with your Base64 Destination yet, you should scroll down
+to the bottom, save the tunnel configuration, and return to the tunnel
+configuration.
 
-|3|
+|key stuff|
 
 A little further down the configuration page, the tunnel options are available.
 Since you've got a site which is not intended to be anonymous, but rather to
 provide anonymous access to others by an alternate gateway, it may be good to
 reduce the number of hops the tunnel takes on the I2P network.
 
-|4|
+|tunnel stuff|
 
 Next are the encrypted leaseset options. You can probably leave these as the
 defaults, since your site isn't anonymous it probably doesn't need features like
 blinding or encrypted leasesets. If you were to choose encrypted leasesets, you
 would not be accessible to anyone unless you shared a key with them in advance.
 
-|5|
+|leaseset stuff|
 
 The next few parts may be especially useful to you if you run a high-traffic
 site or find yourself subject to DDOS attacks. Here you can configure various
 kinds of connection limits.
 
-|6|
+|rate limiting stuff|
 
 After that, there are a few other ways of filtering connections by client
 characteristics. First, you can block access via inproxies like I2P.to and
@@ -82,26 +83,36 @@ users, the "Unique local address per client" will give each client it's own
 local IP address instead of them all appearing to the server to be from
 127.0.0.1.
 
-|7|
+|coarse blocking stuff|
 
 You can probably leave these next few options to the defaults.
 
-|8|
+|Reduced tunnel stuff|
 
 Lastly, you can set up an advanced filter definition. Writing filters is beyond
 what I'm prepared to do in this document, for more information see the format
 specification for now.
 
-|9|
+|granular blocking stuff|
 
 Multi-Home an Application
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 One interesting thing that I2P can do is host the same site on multiple servers
-at the same time transparently, which is referred to as "Multihoming."
+at the same time transparently, which is referred to as "Multihoming." In order
+to multihome your application, you will need to return to the tunnel menu and
+change the location of your private key file to it's own, non-shared location.
+
+|multihoming key stuff|
+
+When you're done, copy the new key file for your new multihomed service to a
+storage device. Now, you can re-produce your service/tunnel configuration with
+those same keys on any I2P router and increase your service's redundancy.
 
 Step four: Publicize and Authenticate your eepSite
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since you're running
 
 .. _place-your-b32i2p-link-on-your-clearnet-page:
 
@@ -119,13 +130,14 @@ Create a subscribable address feed
 Distributing
 ^^^^^^^^^^^^
 
-.. |1| image:: ./MIRROR_IMAGES/http-1.png
-.. |2| image:: ./MIRROR_IMAGES/http-2.png
-.. |3| image:: ./MIRROR_IMAGES/http-3.png
-.. |4| image:: ./MIRROR_IMAGES/http-4.png
-.. |5| image:: ./MIRROR_IMAGES/http-5.png
-.. |6| image:: ./MIRROR_IMAGES/http-6.png
-.. |7| image:: ./MIRROR_IMAGES/http-7.png
-.. |8| image:: ./MIRROR_IMAGES/http-8.png
-.. |9| image:: ./MIRROR_IMAGES/http-9.png
+.. |config stuff| image:: ./MIRROR_IMAGES/http-1.png
+.. |host stuff| image:: ./MIRROR_IMAGES/http-2.png
+.. |key stuff| image:: ./MIRROR_IMAGES/http-3.png
+.. |tunnel stuff| image:: ./MIRROR_IMAGES/http-4.png
+.. |leaseset stuff| image:: ./MIRROR_IMAGES/http-5.png
+.. |rate limiting stuff| image:: ./MIRROR_IMAGES/http-6.png
+.. |coarse blocking stuff| image:: ./MIRROR_IMAGES/http-7.png
+.. |Reduced tunnel stuff| image:: ./MIRROR_IMAGES/http-8.png
+.. |granular blocking stuff| image:: ./MIRROR_IMAGES/http-9.png
+.. |multihoming key stuff| image:: ./MIRROR_IMAGES/http-3-b.png
 

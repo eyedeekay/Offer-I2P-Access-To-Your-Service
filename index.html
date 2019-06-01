@@ -27,26 +27,29 @@
 <h4 id="create-an-http-tunnel-for-your-application">Create an HTTP Tunnel for your application</h4>
 <p>If you've configured a reverse proxy or an SSH tunnel before, then the general idea here should be very familiar to you. I2PTunnel, in essence, is just forwarding ports from the host to the I2P Network. To set this up using the web interface, go to the I2PTunnel configuration page.</p>
 <p>At the bottom of the &quot;I2P Hidden Services&quot; section of the page, select an HTTP Service from the drop-down and click &quot;Create.&quot;</p>
-<p><img src="./MIRROR_IMAGES/http-1.png" alt="1" /></p>
+<p><img src="./MIRROR_IMAGES/http-1.png" alt="config stuff" /></p>
 <p>It will immediately drop you into the granular tunnel configuration page, which we're about to explore from top-to-bottom. The first, most essential settings are the tunnel name and the target host:port. <strong>The target host:port is</strong> <strong>the place where you input the address of the service you are forwarding to</strong> <strong>I2P</strong>. Once you've configured that, your web site will become available over i2p. However, there are probably a few things that we can improve.</p>
-<p><img src="./MIRROR_IMAGES/http-2.png" alt="2" /></p>
-<p>Next, you may want to pick a hostname to use for your eepSite. This hostname doesn't need to be universally unique, for now, it will only be used locally. We'll publish it to an address helper later. If the <em>Local Destination</em> field isn't populated with your Base64 Destination yet, you should scroll down to the bottom, save the tunnel configuration, and return to the tunnel configuration.</p>
-<p><img src="./MIRROR_IMAGES/http-3.png" alt="3" /></p>
+<p><img src="./MIRROR_IMAGES/http-2.png" alt="host stuff" /></p>
+<p>Next, you may want to pick a hostname to use for your eepSite. This hostname doesn't need to be universally unique, for now, it will only be used locally. We'll publish it to an address helper later. <strong>If</strong> the <em>Local Destination</em> field isn't populated with your Base64 Destination yet, you should scroll down to the bottom, save the tunnel configuration, and return to the tunnel configuration.</p>
+<p><img src="./MIRROR_IMAGES/http-3.png" alt="key stuff" /></p>
 <p>A little further down the configuration page, the tunnel options are available. Since you've got a site which is not intended to be anonymous, but rather to provide anonymous access to others by an alternate gateway, it may be good to reduce the number of hops the tunnel takes on the I2P network.</p>
-<p><img src="./MIRROR_IMAGES/http-4.png" alt="4" /></p>
+<p><img src="./MIRROR_IMAGES/http-4.png" alt="tunnel stuff" /></p>
 <p>Next are the encrypted leaseset options. You can probably leave these as the defaults, since your site isn't anonymous it probably doesn't need features like blinding or encrypted leasesets. If you were to choose encrypted leasesets, you would not be accessible to anyone unless you shared a key with them in advance.</p>
-<p><img src="./MIRROR_IMAGES/http-5.png" alt="5" /></p>
+<p><img src="./MIRROR_IMAGES/http-5.png" alt="leaseset stuff" /></p>
 <p>The next few parts may be especially useful to you if you run a high-traffic site or find yourself subject to DDOS attacks. Here you can configure various kinds of connection limits.</p>
-<p><img src="./MIRROR_IMAGES/http-6.png" alt="6" /></p>
+<p><img src="./MIRROR_IMAGES/http-6.png" alt="rate limiting stuff" /></p>
 <p>After that, there are a few other ways of filtering connections by client characteristics. First, you can block access via inproxies like I2P.to and similar. Since you have a clearnet presence already, changing this may be better if you want to encourage I2P users to only use your eepSite. You can also block accesses via specific user-agents, for instance blocking wget may be helpful if you want to prevent spidering. Finally, and of particular interest to Fail2Ban users, the &quot;Unique local address per client&quot; will give each client it's own local IP address instead of them all appearing to the server to be from 127.0.0.1.</p>
-<p><img src="./MIRROR_IMAGES/http-7.png" alt="7" /></p>
+<p><img src="./MIRROR_IMAGES/http-7.png" alt="coarse blocking stuff" /></p>
 <p>You can probably leave these next few options to the defaults.</p>
-<p><img src="./MIRROR_IMAGES/http-8.png" alt="8" /></p>
+<p><img src="./MIRROR_IMAGES/http-8.png" alt="Reduced tunnel stuff" /></p>
 <p>Lastly, you can set up an advanced filter definition. Writing filters is beyond what I'm prepared to do in this document, for more information see the format specification for now.</p>
-<p><img src="./MIRROR_IMAGES/http-9.png" alt="9" /></p>
+<p><img src="./MIRROR_IMAGES/http-9.png" alt="granular blocking stuff" /></p>
 <h4 id="multi-home-an-application">Multi-Home an Application</h4>
-<p>One interesting thing that I2P can do is host the same site on multiple servers at the same time transparently, which is referred to as &quot;Multihoming.&quot;</p>
+<p>One interesting thing that I2P can do is host the same site on multiple servers at the same time transparently, which is referred to as &quot;Multihoming.&quot; In order to multihome your application, you will need to return to the tunnel menu and change the location of your private key file to it's own, non-shared location.</p>
+<p><img src="./MIRROR_IMAGES/http-3-b.png" alt="multihoming key stuff" /></p>
+<p>When you're done, copy the new key file for your new multihomed service to a storage device. Now, you can re-produce your service/tunnel configuration with those same keys on any I2P router and increase your service's redundancy.</p>
 <h3 id="step-four-publicize-and-authenticate-your-eepsite">Step four: Publicize and Authenticate your eepSite</h3>
+<p>Since you're running</p>
 <h4 id="place-your-b32i2p-link-on-your-clearnet-page">Place your .b32.i2p link on your clearnet page</h4>
 <h4 id="distributing-an-addresshelper-link-from-your-clearnet-page">Distributing an &quot;Addresshelper&quot; link from your clearnet page</h4>
 <h4 id="create-a-subscribable-address-feed">Create a subscribable address feed</h4>
