@@ -24,18 +24,34 @@ features.
 If you've configured a reverse proxy or an SSH tunnel before, then the general
 idea here should be very familiar to you. I2PTunnel, in essence, is just
 forwarding ports from the host to the I2P Network. To set this up using the web
-interface, go to the I2PTunnel configuration page. At the bottom of the "I2P
-Hidden Services" section of the page, select an HTTP Service from the drop-down
-and click "Create."
+interface, go to the I2PTunnel configuration page.
 
-It will immediately drop you into the granular tunnel configuration page, which
-we're about to explore from top-to-bottom.
+At the bottom of the "I2P Hidden Services" section of the page, select an HTTP
+Service from the drop-down and click "Create."
 
 ![1](./MIRROR_IMAGES/http-1.png)
 
+It will immediately drop you into the granular tunnel configuration page, which
+we're about to explore from top-to-bottom. The first, most essential settings
+are the tunnel name and the target host:port. **The target host:port is**
+**the place where you input the address of the service you are forwarding to**
+**I2P**. Once you've configured that, your web site will become available over
+i2p. However, there are probably a few things that we can improve.
+
 ![2](./MIRROR_IMAGES/http-2.png)
 
+Next, you may want to pick a hostname to use for your eepSite. This hostname
+doesn't need to be universally unique, for now, it will only be used locally.
+We'll publish it to an address helper later. If the *Local Destination* field
+isn't populated with your Base64 Destination yet, you should scroll down to the
+bottom, save the tunnel configuration, and return to the tunnel configuration.
+
 ![3](./MIRROR_IMAGES/http-3.png)
+
+A little further down the configuration page, the tunnel options are available.
+Since you've got a site which is not intended to be anonymous, but rather to
+provide anonymous access to others by an alternate gateway, it may be good to
+reduce the number of hops the tunnel takes on the I2P network.
 
 ![4](./MIRROR_IMAGES/http-4.png)
 
