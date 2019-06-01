@@ -205,7 +205,10 @@ those same keys on any I2P router and increase your service's redundancy.
 
 ### Step four: Publicize and Authenticate your eepSite
 
-Since you're running
+Since you're running an anonymously accessible instance of an existing clear-net
+service, you'll probably want to leverage some existing form of trust to
+distribute your eepSite URL, like a TLS Certificate signed by a recognized and
+reputable authority. What can I say we live in an imperfect world.
 
 #### Place your .b32.i2p link on your clearnet page
 
@@ -215,7 +218,7 @@ Since you're running
 
 #### Create a subscribable address feed
 
-[](https://geti2p.net/spec/proposals/112-addressbook-subscription-feed-commands)
+[I2P Subscription Feed Commands](https://geti2p.net/spec/proposals/112-addressbook-subscription-feed-commands)
 
 
 #### Distributing
