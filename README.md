@@ -1,7 +1,9 @@
 How to offer your existing Web Site as an I2P eepSite
 =====================================================
 
-A somewhat meta-tutorial and guided tour of mirroring a clear-web site to I2P.
+This blog post is intended as a general guide to running a mirror of a clear-net
+service as an eepSite.
+
 Unfortunately, it's probably impossible to *completely* cover all possible cases
 of making an existing web site available as an eepSite, there's simply too
 diverse an array of server-side software, not to mention the in-practice
