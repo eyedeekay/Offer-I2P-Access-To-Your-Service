@@ -122,6 +122,15 @@ reputable authority. What can I say we live in an imperfect world.
 Place your .b32.i2p link on your clearnet page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The simplest way to provide a link to your eepSite using an existing site to
+distribute the link is to distribute a so-called "Base32" address on your
+existing web site. The Base32 address is the hash of the public key of your I2P
+destination, so it cannot be forged if it is provided by a reliable source. In
+the case of a clear-net site with a hidden service presence, one of those places
+is likely to be a web page.
+
+|base32 stuff|
+
 Distributing an "Addresshelper" link from your clearnet page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -133,14 +142,15 @@ Create a subscribable address feed
 Distributing
 ^^^^^^^^^^^^
 
-.. |config stuff| image:: ./MIRROR_IMAGES/http-1.png
-.. |host stuff| image:: ./MIRROR_IMAGES/http-2.png
-.. |key stuff| image:: ./MIRROR_IMAGES/http-3.png
-.. |tunnel stuff| image:: ./MIRROR_IMAGES/http-4.png
-.. |leaseset stuff| image:: ./MIRROR_IMAGES/http-5.png
-.. |rate limiting stuff| image:: ./MIRROR_IMAGES/http-6.png
-.. |coarse blocking stuff| image:: ./MIRROR_IMAGES/http-7.png
-.. |Reduced tunnel stuff| image:: ./MIRROR_IMAGES/http-8.png
-.. |granular blocking stuff| image:: ./MIRROR_IMAGES/http-9.png
-.. |multihoming key stuff| image:: ./MIRROR_IMAGES/http-3-b.png
+.. |config stuff| image:: /_static/images/http-1.png
+.. |host stuff| image:: /_static/images/http-2.png
+.. |key stuff| image:: /_static/images/http-3.png
+.. |tunnel stuff| image:: /_static/images/http-4.png
+.. |leaseset stuff| image:: /_static/images/http-5.png
+.. |rate limiting stuff| image:: /_static/images/http-6.png
+.. |coarse blocking stuff| image:: /_static/images/http-7.png
+.. |Reduced tunnel stuff| image:: /_static/images/http-8.png
+.. |granular blocking stuff| image:: /_static/images/http-9.png
+.. |multihoming key stuff| image:: /_static/images/http-3-b.png
+.. |base32 stuff| image:: /_static/images/http-1-b.png
 

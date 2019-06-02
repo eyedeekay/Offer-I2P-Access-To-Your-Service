@@ -34,7 +34,7 @@ meta:
 blog:
 	mkdir -p $(HOME)/Workspace/desktop-Workspace/mtn/i2p.www/i2p2www/blog/2019/06/01
 	cp mirroring-guide.rst $(HOME)/Workspace/desktop-Workspace/mtn/i2p.www/i2p2www/blog/2019/06/01
-
+	cp _static/images/*.png $(HOME)/Workspace/desktop-Workspace/mtn/i2p.www/i2p2www/static/images
 
 faq:
 	pandoc --highlight-style=tango -f gfm FAQ/FAQ-admin.md -o - | tee FAQ/index.html
