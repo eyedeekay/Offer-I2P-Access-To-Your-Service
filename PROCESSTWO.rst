@@ -1,17 +1,20 @@
 
-Process Two: Forward your service to an eepSite
------------------------------------------------
+{% trans -%}Process Two: Forward your service to an eepSite{%- endtrans %}
+--------------------------------------------------------------------------
 
+{% trans -%}
 Congratulations! You've completed the most difficult part. From here on, the
 decisions you must make, and the consequences that they will have, are much
 more straightforward and easy to enumerate. Such is the beauty of a
 cryptographically secure network layer like I2P!
+{%- endtrans %}
 
 .. _step-three-generate-your-i2p-tunnels-and-addresses:
 
-Step three: Generate your .i2p Tunnels and Addresses
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{% trans -%}Step three: Generate your .i2p Tunnels and Addresses{%- endtrans %}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+{% trans -%}
 For eepSites, you will need to create an HTTP Server Tunnel. This is
 an I2P destination with a few special features for hosting HTTP services to
 enable things like rate-limiting, filtering, and the inclusion of headers to
@@ -21,58 +24,74 @@ a case-by-case basis, among other things. Explore these options and how they
 relate to the applications which you considered in step one, even though a very
 simple setup is easy, larger sites may benefit from taking advantage of these
 features.
+{%- endtrans %}
 
-Create an HTTP Tunnel for your application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+{% trans -%}Create an HTTP Tunnel for your application{%- endtrans %}
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+{% trans -%}
 If you've configured a reverse proxy or an SSH tunnel before, then the general
 idea here should be very familiar to you. I2PTunnel, in essence, is just
 forwarding ports from the host to the I2P Network. To set this up using the web
 interface, go to the I2PTunnel configuration page.
+{%- endtrans %}
 
+{% trans -%}
 At the bottom of the "I2P Hidden Services" section of the page, select an HTTP
 Service from the drop-down and click "Create."
+{%- endtrans %}
 
 |config stuff|
 
+{% trans -%}
 It will immediately drop you into the granular tunnel configuration page, which
 we're about to explore from top-to-bottom. The first, most essential settings
 are the tunnel name and the target host:port. **The target host:port is**
 **the place where you input the address of the service you are forwarding to**
 **I2P**. Once you've configured that, your web site will become available over
 i2p. However, there are probably a few things that we can improve.
+{%- endtrans %}
 
 |host stuff|
 
+{% trans -%}
 Next, you may want to pick a hostname to use for your eepSite. This hostname
 doesn't need to be universally unique, for now, it will only be used locally.
 We'll publish it to an address helper later. **If** the *Local Destination*
 field isn't populated with your Base64 Destination yet, you should scroll down
 to the bottom, save the tunnel configuration, and return to the tunnel
 configuration.
+{%- endtrans %}
 
 |key stuff|
 
+{% trans -%}
 A little further down the configuration page, the tunnel options are available.
 Since you've got a site which is not intended to be anonymous, but rather to
 provide anonymous access to others by an alternate gateway, it may be good to
 reduce the number of hops the tunnel takes on the I2P network.
+{%- endtrans %}
 
 |tunnel stuff|
 
+{% trans -%}
 Next are the encrypted leaseset options. You can probably leave these as the
 defaults, since your site isn't anonymous it probably doesn't need features like
 blinding or encrypted leasesets. If you were to choose encrypted leasesets, you
 would not be accessible to anyone unless you shared a key with them in advance.
+{%- endtrans %}
 
 |leaseset stuff|
 
+{% trans -%}
 The next few parts may be especially useful to you if you run a high-traffic
 site or find yourself subject to DDOS attacks. Here you can configure various
 kinds of connection limits.
+{%- endtrans %}
 
 |rate limiting stuff|
 
+{% trans -%}
 After that, there are a few other ways of filtering connections by client
 characteristics. First, you can block access via inproxies like I2P.to and
 similar. Since you have a clearnet presence already, changing this may be better
@@ -82,64 +101,82 @@ you want to prevent spidering. Finally, and of particular interest to Fail2Ban
 users, the "Unique local address per client" will give each client it's own
 local IP address instead of them all appearing to the server to be from
 127.0.0.1.
+{%- endtrans %}
 
 |coarse blocking stuff|
 
+{% trans -%}
 You can probably leave these next few options to the defaults.
+{%- endtrans %}
 
 |Reduced tunnel stuff|
 
+{% trans -%}
 Lastly, you can set up an advanced filter definition. Writing filters is beyond
 what I'm prepared to do in this document, for more information see the format
 specification for now.
+{%- endtrans %}
 
 |granular blocking stuff|
 
-Multi-Home an Application
-^^^^^^^^^^^^^^^^^^^^^^^^^
+{% trans -%}Multi-Home an Application{%- endtrans %}
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+{% trans -%}
 One interesting thing that I2P can do is host the same site on multiple servers
 at the same time transparently, which is referred to as "Multihoming." In order
 to multihome your application, you will need to return to the tunnel menu and
 change the location of your private key file to it's own, non-shared location.
+{%- endtrans %}
 
 |multihoming key stuff|
 
+{% trans -%}
 When you're done, copy the new key file for your new multihomed service to a
 storage device. Now, you can re-produce your service/tunnel configuration with
 those same keys on any I2P router and increase your service's redundancy.
+{%- endtrans %}
 
-Step four: Publicize and Authenticate your eepSite
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{% trans -%}Step four: Publicize and Authenticate your eepSite{%- endtrans %}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+{% trans -%}
 Since you're running an anonymously accessible instance of an existing clear-net
 service, you'll probably want to leverage some existing form of trust to
 distribute your eepSite URL, like a TLS Certificate signed by a recognized and
 reputable authority. What can I say we live in an imperfect world.
+{%- endtrans %}
 
 .. _place-your-b32i2p-link-on-your-clearnet-page:
 
-Place your .b32.i2p link on your clearnet page
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+{% trans -%}Place your .b32.i2p link on your clearnet page{%- endtrans %}
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+{% trans -%}
 The simplest way to provide a link to your eepSite using an existing site to
 distribute the link is to distribute a so-called "Base32" address. The Base32
 address is the hash of the public key of your I2P destination, so it cannot be
 forged if it is provided by a reliable source. In the case of a clear-net site
 with a hidden service presence, one of those places is likely to be that
 clear-net site.
+{%- endtrans %}
 
+{% trans -%}
 Your base32 address is visible on the main i2ptunnel configuration page and it
 looks like this:
+{%- endtrans %}
 
 |base32 stuff|
 
+{% trans -%}
 Your users can copy-and-paste this link directly into their I2P browsers and
 it will just work, no additional configuration required.
+{%- endtrans %}
 
-Distributing an "Addresshelper" link from your clearnet page
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+{% trans -%}Distributing an "Addresshelper" link from your clearnet page{%- endtrans %}
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+{% trans -%}
 You can also distribute a human-readable link to suggest to your potential users
 by taking advantage of I2P's "Address Book" feature, which allows the users to
 decide to assign a human-readable domain name to your cryptographically
@@ -147,38 +184,40 @@ assured identity. You can do this by distributing a specially crafted link
 containing the domain name that you want to suggest, followed by a slash,
 followed by ?i2paddresshelper=, followed by the Local Destination of the tunnel
 you just created, which you can see here:
+{%- endtrans %}
 
 |local destination stuff|
 
+{% trans -%}
 So, for the example site, such a link would point to this address
+{%- endtrans %}
 
 ::
 
        http://mirror.i2p/?i2paddresshelper=HGPghWp0cEIjgjzqKQg~brL0TXkvV6IqyyEvQxOmVIecPIY~qFD0xYCwLFxTv2Hmi781ngqGo5OImRSeI-4cy167Pb1d0sTArtm6csq~HL8nj~UDP28q1DZFgR4mXX6VJMp7XJR~Mvjfzj0x7-JVaoMhrOKDE0P~tplH5Uik3xbS1rq3VF5vILx9lvkmSyZnu4bD7jk-h-na49gpk1Yx4znP0V3Mi9C6AAEzB4GexiSBxbFJyXFlO3byi-ca-jHqiMqtVE183TbXQNGPBI6FO-iBwYcFtIkWC0cBMneqj~kl3nXEn8RrO-yd-060oueyaza8NyN4FfSTHS5F1r9rru0ntX7GLg1k3QO7fTVhly0q2B0gZqnaHP808aTGD7OFuX69wT40uF3UWPmhsSE-M9AUYbYR64OFmk0jS70qnIApzWrjoye7K3KSaJuyVUQ1sD94aqRUKRKM2QCill6f8XmIyaCv02GkzEJxngBx009OwaDIvmEdOGpLJJLXw7QQBQAEAAcAAA==
 
+{% trans -%}
 I keep saying suggest because when the such a link is visited, I2P asks for the
 user's consent to add this human-readable name to the user's local address book.
 That means there is no expectation that this domain be universally agreed upon
 by all visitors on the I2P network, whereas in the case of base32 addresses,
 the opposite is true.
+{%- endtrans %}
 
-Registering with an Addresshelper service
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+{% trans -%}Registering with an Addresshelper service{%- endtrans %}
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+{% trans -%}
 Nonetheless, there do exist publicly available address subscription feeds, and
 special services for discovering new human-readable addresses, such as no.i2p,
 inr.i2p, and stats.i2p. These are sometimes known as Address helpers or Jump
 Services, and can also be subscribed to automatically. This may be espescially
 helpful to users of your service who wish to acquire the address without leaving
 i2p or visiting your clearnet service.
+{%- endtrans %}
 
--  `Register a name with stats.i2p <http://stats.i2p/i2p/addkey.html>`__
--  `Register a new name with inr.i2p <http://inr.i2p/postkey/>`__
-
-Create a subscribable address feed
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-`I2P Subscription Feed Commands <https://geti2p.net/spec/proposals/112-addressbook-subscription-feed-commands>`__
+-  `{% trans -%}Register a name with stats.i2p{%- endtrans %} <http://stats.i2p/i2p/addkey.html>`__
+-  `{% trans -%}Register a new name with inr.i2p{%- endtrans %} <http://inr.i2p/postkey/>`__
 
 .. |config stuff| image:: /_static/images/http-1.png
 .. |host stuff| image:: /_static/images/http-2.png

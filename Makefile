@@ -9,19 +9,20 @@ new: check faq ident
 	cat INTRO.md DISCLAIMER.md PROCESSONE.md PROCESSTWO.md CHECK.md ASIDE.md | tee README.md
 	cat README.md FAQ/FAQ-admin.md FAQ/FAQ-users.md IDENTITY/TLS.md | pandoc --highlight-style=tango -f gfm - -t html5 -o README.pdf
 
-rst: meta
-	@echo "=====================================================" | tee -a INTRO.rst
-	torst INTRO.md | tee -a INTRO.rst
-	@echo "" | tee DISCLAIMER.rst
-	torst DISCLAIMER.md | tee -a DISCLAIMER.rst
-	@echo "" | tee PROCESSONE.rst
-	torst PROCESSONE.md | tee -a PROCESSONE.rst
-	@echo "" | tee PROCESSTWO.rst
-	torst PROCESSTWO.md | tee -a PROCESSTWO.rst
-	@echo "" | tee CHECK.rst
-	torst CHECK.md | tee -a CHECK.rst
-	@echo "" | tee -a ASIDE.rst
-	torst ASIDE.md | tee ASIDE.rst
+rst:
+	#meta
+	#@echo "=====================================================" | tee -a INTRO.rst
+	#torst INTRO.md | tee -a INTRO.rst
+	#@echo "" | tee DISCLAIMER.rst
+	#torst DISCLAIMER.md | tee -a DISCLAIMER.rst
+	#@echo "" | tee PROCESSONE.rst
+	#torst PROCESSONE.md | tee -a PROCESSONE.rst
+	#@echo "" | tee PROCESSTWO.rst
+	#torst PROCESSTWO.md | tee -a PROCESSTWO.rst
+	#@echo "" | tee CHECK.rst
+	#torst CHECK.md | tee -a CHECK.rst
+	#@echo "" | tee -a ASIDE.rst
+	#torst ASIDE.md | tee ASIDE.rst
 	cat INTRO.rst DISCLAIMER.rst PROCESSONE.rst PROCESSTWO.rst CHECK.rst ASIDE.rst | tee mirroring-guide.rst
 
 meta:
@@ -32,8 +33,8 @@ meta:
 	@echo '' | tee -a INTRO.rst
 
 blog:
-	mkdir -p $(HOME)/Workspace/desktop-Workspace/mtn/i2p.www/i2p2www/blog/2019/06/01
-	cp mirroring-guide.rst $(HOME)/Workspace/desktop-Workspace/mtn/i2p.www/i2p2www/blog/2019/06/01
+	mkdir -p $(HOME)/Workspace/desktop-Workspace/mtn/i2p.www/i2p2www/blog/2019/06/02
+	cp mirroring-guide.rst $(HOME)/Workspace/desktop-Workspace/mtn/i2p.www/i2p2www/blog/2019/06/02
 	cp _static/images/*.png $(HOME)/Workspace/desktop-Workspace/mtn/i2p.www/i2p2www/static/images
 
 faq:
