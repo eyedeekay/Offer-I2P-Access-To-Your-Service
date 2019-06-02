@@ -114,19 +114,54 @@ reputable authority. What can I say we live in an imperfect world.
 #### Place your .b32.i2p link on your clearnet page
 
 The simplest way to provide a link to your eepSite using an existing site to
-distribute the link is to distribute a so-called "Base32" address on your
-existing web site. The Base32 address is the hash of the public key of your I2P
-destination, so it cannot be forged if it is provided by a reliable source. In
-the case of a clear-net site with a hidden service presence, one of those places
-is likely to be a web page.
+distribute the link is to distribute a so-called "Base32" address. The Base32
+address is the hash of the public key of your I2P destination, so it cannot be
+forged if it is provided by a reliable source. In the case of a clear-net site
+with a hidden service presence, one of those places is likely to be that
+clear-net site.
+
+Your base32 address is visible on the main i2ptunnel configuration page and it
+looks like this:
 
 ![base32 stuff](/_static/images/http-1-b.png)
 
+Your users can copy-and-paste this link directly into their I2P browsers and
+it will just work, no additional configuration required.
+
 #### Distributing an "Addresshelper" link from your clearnet page
+
+You can also distribute a human-readable link to suggest to your potential users
+by taking advantage of I2P's "Address Book" feature, which allows the users to
+decide to assign a human-readable domain name to your cryptographically
+assured identity. You can do this by distributing a specially crafted link
+containing the domain name that you want to suggest, followed by a slash,
+followed by ?i2paddresshelper=, followed by the Local Destination of the tunnel
+you just created, which you can see here:
+
+![local destination stuff](_static/images/http-3.png)
+
+So, for the example site, such a link would point to this address
+
+        http://mirror.i2p/?i2paddresshelper=HGPghWp0cEIjgjzqKQg~brL0TXkvV6IqyyEvQxOmVIecPIY~qFD0xYCwLFxTv2Hmi781ngqGo5OImRSeI-4cy167Pb1d0sTArtm6csq~HL8nj~UDP28q1DZFgR4mXX6VJMp7XJR~Mvjfzj0x7-JVaoMhrOKDE0P~tplH5Uik3xbS1rq3VF5vILx9lvkmSyZnu4bD7jk-h-na49gpk1Yx4znP0V3Mi9C6AAEzB4GexiSBxbFJyXFlO3byi-ca-jHqiMqtVE183TbXQNGPBI6FO-iBwYcFtIkWC0cBMneqj~kl3nXEn8RrO-yd-060oueyaza8NyN4FfSTHS5F1r9rru0ntX7GLg1k3QO7fTVhly0q2B0gZqnaHP808aTGD7OFuX69wT40uF3UWPmhsSE-M9AUYbYR64OFmk0jS70qnIApzWrjoye7K3KSaJuyVUQ1sD94aqRUKRKM2QCill6f8XmIyaCv02GkzEJxngBx009OwaDIvmEdOGpLJJLXw7QQBQAEAAcAAA==
+
+I keep saying suggest because when the such a link is visited, I2P asks for the
+user's consent to add this human-readable name to the user's local address book.
+That means there is no expectation that this domain be universally agreed upon
+by all visitors on the I2P network, whereas in the case of base32 addresses,
+the opposite is true.
+
+#### Registering with an Addresshelper service
+
+Nonetheless, there do exist publicly available address subscription feeds, and
+special services for discovering new human-readable addresses, such as no.i2p,
+inr.i2p, and stats.i2p. These are sometimes known as Address helpers or Jump
+Services, and can also be subscribed to automatically. This may be espescially
+helpful to users of your service who wish to acquire the address without leaving
+i2p or visiting your clearnet service.
+
+ * [Register a name with stats.i2p](http://stats.i2p/i2p/addkey.html)
+ * [Register a new name with inr.i2p](http://inr.i2p/postkey/)
 
 #### Create a subscribable address feed
 
 [I2P Subscription Feed Commands](https://geti2p.net/spec/proposals/112-addressbook-subscription-feed-commands)
-
-
-#### Distributing
